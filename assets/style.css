@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+/* Header e Navbar  */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2% 2% 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    color: #CA2626;
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 50%;
+    margin-top: 3%;
+}
+
+/* Conteúdo */
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content-img{
+    width: 50%;
+}
+
+.main-content-img .main-img {
+    width:100%;
+}
+
+/* Caixa de Login  */
+
+.login-box {
+    width: 30%;
+    margin: 3%;
+    padding: 5%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.login-box h2{
+    color: #a21e1e;
+}
+
+.account-option {
+    cursor: pointer;
+    margin: 0 0 5%;
+    display: flex;
+    align-self: center;
+    width: 25%;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 3% 0;
+    font-size: 100%;
+    border: none;
+    margin-bottom: 15%;
+    border-bottom: 2px solid #CA2626;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3% 0;
+    font-size: 100%;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box:focus~label,
+.login-box .user-box input:valid~label {
+    top: -50%;
+    left: 0;
+    color: #03e9f4;
+    font-size: 80%;
+}
+
+.forgot__pass {
+    font-size: 80%;
+    float: right;
+    color: black;
+}
+
+.btn__submit{
+    position: relative;
+    display: inline-block;
+    color: black;
+    font-size: 100%;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: -5s;
+    margin-top: 20px;
+}
