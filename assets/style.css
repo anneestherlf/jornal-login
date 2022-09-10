@@ -1,30 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
 
+
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0;
+    padding: 0;
+    background: rgb(246, 245, 235);
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 /* Header e Navbar  */
 
+nav a {
+    color: rgb(111, 12, 12);
+
+}
+
 header {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    padding: 2% 2% 0;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 1% 1% 1%;
+    transition: all 0.5s;
+    margin-bottom: 0;
+
 }
 
 .logo {
     display: flex;
     flex-direction: row;
-    color: #CA2626;
+    font-size: small;
+    color: rgb(111, 12, 12);
     cursor: pointer;
+
 }
 
 .logo-img {
-    height: 50%;
-    margin-top: 3%;
+    height: 3.5em;
+    right: 1.5%;
 }
 
 /* Conteúdo */
@@ -32,33 +46,36 @@ header {
 .main-content {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.main-content-img{
-    width: 50%;
+.main-content-img {
+    width: 30%;
+    margin-right: 10%;
 }
 
 .main-content-img .main-img {
-    width:100%;
+    width: 100%;
+    border-radius: 30% 70% 49% 51% / 30% 30% 70% 70%;
 }
 
 /* Caixa de Login  */
 
 .login-box {
     width: 30%;
-    margin: 3%;
-    padding: 5%;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2% 3%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    background-color: white;
 }
 
-.login-box h2{
-    color: #a21e1e;
+.login-box h2 {
+    color: rgb(111, 12, 12);
 }
 
 .account-option {
@@ -79,26 +96,27 @@ header {
     font-size: 100%;
     border: none;
     margin-bottom: 15%;
-    border-bottom: 2px solid #CA2626;
+    border-bottom: 2px solid rgb(111, 12, 12);
     outline: none;
     background: transparent;
 }
 
 .login-box .user-box label {
+    color: rgba(0, 0, 0, 0.276);
     position: absolute;
     top: 0;
     left: 0;
     padding: 3% 0;
-    font-size: 100%;
+    font-size: 90%;
     pointer-events: none;
     transition: .5s;
 }
 
 .login-box .user-box:focus~label,
 .login-box .user-box input:valid~label {
-    top: -50%;
+    top: -30%;
     left: 0;
-    color: #03e9f4;
+    color: #a21e1e;
     font-size: 80%;
 }
 
@@ -108,15 +126,83 @@ header {
     color: black;
 }
 
-.btn__submit{
+/* Botão  */
+
+.btn__submit {
     position: relative;
+    border: #a21e1e;
+    border-radius: 5px;
+    border-style: solid;
     display: inline-block;
-    color: black;
+    color: #a21e1e;
     font-size: 100%;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
     transition: -5s;
-    margin-top: 20px;
+    padding: 2% 15%;
+    transition: .5s;
+}
+
+.btn__submit:hover {
+    background: #a21e1e;
+    color: white;
+    border-radius: 5px;
+    padding: 2% 15%;
+    transition: .5s;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+/* Middle  */
+
+.main2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10%;
+    gap: 10%;
+}
+
+.main2-img {
+    width: 30%;
+}
+
+/* Responsividade */
+
+@media (max-width: 785px) {
+    body {
+        margin: 0;
+    }
+
+    header {
+        margin: 2%;
+        transition: 1s;
+    }
+
+    .login-box {
+        width: 80%;
+    }
+
+    .main-content-img {
+        margin-top: 20%;
+        width: 60%;
+        margin-bottom: 0;
+        transition: 1s;
+    }
+
+    .main-content {
+        padding: 100px 2%;
+        flex-direction: column;
+        margin-bottom: 0;
+        transition: 1s;
+    }
+
+    .main2 {
+        margin-top: 0;
+    }
 }
